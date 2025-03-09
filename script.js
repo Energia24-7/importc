@@ -36,7 +36,8 @@ function calcular() {
     let valor_total = costo_sin_iva + valor_iva;
     document.getElementById("valor_total").innerText = "Valor Total con IVA: $" + valor_total.toFixed(2);
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    calcular();
 function imprimir() {
     window.print();
 }
