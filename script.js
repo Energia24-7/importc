@@ -27,7 +27,7 @@ function calcular() {
     let valor_fodinfa = valor_cif * 0.0005;
     document.getElementById("valor_fodinfa").innerText = "Valor Fodinfa: $" + valor_fodinfa.toFixed(2);
 
-    let valor_iva = valor_cif * 0.15;
+    let valor_iva = (valor_cif + valor_arancel + valor_fodinfa) * 0.15;
     document.getElementById("valor_iva").innerText = "Valor IVA: $" + valor_iva.toFixed(2);
 
     let costo_sin_iva = valor_cif + valor_arancel + valor_fodinfa + isd + costo_transferencia;
